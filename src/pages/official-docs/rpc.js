@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import GithubFetcher from '../components/githubFetcher'
+import GithubFetcher from '../../components/githubFetcher'
 
 const Rpc = () => (
   <GithubFetcher

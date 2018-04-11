@@ -24,6 +24,9 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gh-pages": "^1.1.0",
     "prettier": "^1.11.1"
   }

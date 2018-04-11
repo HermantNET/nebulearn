@@ -20,7 +20,7 @@ const IndexPage = () => (
       Nebulearn is a collection of educational resources for those wanting to
       get started developing on the Nebulas blockchain.
     </p>
-    <Link to="/installation/">Click here to get started.</Link>
+    <Link to="/official-docs/installation/">Click here to get started.</Link>
   </div>
 )
 

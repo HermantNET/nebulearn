@@ -64,9 +64,6 @@ module.exports = ChatContract`
 const ChatContract = () => (
   <div>
     <h1>Chat Room Smart Contract</h1>
-    <p>
-      Author: <a href="https://github.com/HermantNET">@HermantNET</a>
-    </p>
     <pre class="language-javascript">
       <code class="language-javascript">
         <div

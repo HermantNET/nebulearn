@@ -23,6 +23,8 @@ const Header = ({ siteTitle }) => (
           style={{
             color: 'white',
             textDecoration: 'none',
+            textTransform: 'uppercase',
+            letterSpacing: '0.1em',
           }}
         >
           {siteTitle}
