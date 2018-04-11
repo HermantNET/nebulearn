@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import 'babel-polyfill'
 
 class GitHubFetcher extends React.Component {
   state = {
