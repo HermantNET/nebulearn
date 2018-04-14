@@ -60,8 +60,8 @@ const Gas = () => (
     <h2>Testing a Smart Contract</h2>
     <ol>
       <li>
-        Navigate to the <strong>Deploy</strong> in the <strong>Contract</strong>{' '}
-        tab.
+        Navigate to the <strong>Deploy</strong> tab on the{' '}
+        <strong>Contract</strong> page of the web wallet.
       </li>
       <li>
         Paste your in the <strong>code</strong> text box. Nebulas supports both
