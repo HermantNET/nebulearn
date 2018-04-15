@@ -39,7 +39,10 @@ class GitHubFetcher extends React.Component {
           style={{ float: 'right', marginLeft: '1em' }}
           href={this.props.url
             .replace('raw.githubusercontent', 'github')
-            .replace('/master', '/blob/master')}
+            .replace(
+              /\/nebulasio\/([\w-_+]+)\/([\w-_+]+)/,
+              '/nebulasio/$1/blob/$2'
+            )}
           target="_blank"
         >
           View this file on GitHub

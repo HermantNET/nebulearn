@@ -48,11 +48,14 @@ class Drawer extends React.Component {
       return (
         <div>
           <div
-            style={{
+            className={css({
               width: '320px',
               height: '100px',
               display: 'inline-block',
-            }}
+              '@media (max-width: 800px)': {
+                width: 0,
+              },
+            })}
           />
           <div
             style={{
@@ -73,7 +76,7 @@ class Drawer extends React.Component {
                 boxSizing: 'border-box',
                 paddingBottom: '2em',
                 '::-webkit-scrollbar-track': {
-                  '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.3)',
+                  '::-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.3)',
                   backgrounColor: '#F5F5F5',
                 },
 
@@ -98,8 +101,11 @@ class Drawer extends React.Component {
               <Item text="IV. Storage" to="/official-docs/storage" />
               <Item text="V. RPC API" to="/official-docs/rpc" />
               <Item text="VI. Testnet" to="/official-docs/testnet-tutorial" />
+              <Item text="Explorer" to="/official-docs/explorer" />
               <Item text="Gas" to="/official-docs/gas" />
+              <Item text="go-nebulas" to="/official-docs/go-nebulas" />
               <Item text="Mainnet" to="/official-docs/mainnet" />
+              <Item text="Neb.js" to="/official-docs/neb-js" />
               <Item text="Testnet" to="/official-docs/testnet" />
               <Item text="Web Wallet" to="/official-docs/wallet" />
 

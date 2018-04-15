@@ -5,6 +5,23 @@ import GithubFetcher from '../../components/githubFetcher'
 const Gas = () => (
   <div>
     <h1>Web Wallet</h1>
+    <p>
+      The official Nebulas wallet for the web. Nebulas users can use it to send
+      transactions and submit smart contracts.{' '}
+      <Link to="/official-docs/neb-js">Neb.js</Link> is used to allow the wallet
+      to interface with Nebulas blockchain.
+    </p>
+    <h2>Features</h2>
+    <ul>
+      <li>Generate a Nebulas address/keystore.</li>
+      <li>Send a transaction.</li>
+      <li>Send an offline transaction.</li>
+      <li>View address/keystore info.</li>
+      <li>View transaction status & info.</li>
+      <li>Deploy/call a smart contract.</li>
+      <li>Choose Nebulas network (Mainnet, Testnet etc.).</li>
+    </ul>
+
     <h2>Official Guides</h2>
     <ul>
       <li>
