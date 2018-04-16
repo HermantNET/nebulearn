@@ -36,10 +36,12 @@ const toggleStyle = css({
   height: '100%',
 })
 
+const windowCheck = typeof window !== 'undefined'
+
 class Drawer extends React.Component {
   state = {
-    open: window ? window.innerWidth > 800 : true,
-    prevPath: window ? window.location.pathname : '/',
+    open: windowCheck ? window.innerWidth > 800 : true,
+    prevPath: windowCheck ? window.location.pathname : '/',
   }
 
   componentDidUpdate() {

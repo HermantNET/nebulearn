@@ -18,7 +18,15 @@ const Header = ({ siteTitle }) => (
         padding: '1.15rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1
+        className={css({
+          margin: 0,
+          '@media (max-width: 450px)': {
+            fontSize: '1.4em',
+            lineHeight: '1.8',
+          },
+        })}
+      >
         <Link
           to="/"
           className={css({
@@ -26,10 +34,6 @@ const Header = ({ siteTitle }) => (
             textDecoration: 'none',
             textTransform: 'uppercase',
             letterSpacing: '0.1em',
-            '@media (max-width: 450px)': {
-              fontSize: '0.6em',
-              lineHeight: '1',
-            },
           })}
         >
           {siteTitle}

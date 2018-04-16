@@ -6,6 +6,7 @@ import ScrollToTop from 'react-scroll-up'
 
 import Header from '../components/header'
 import Drawer from '../components/drawer'
+import upArrow from '../images/up-arrow.svg'
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -43,23 +44,15 @@ const Layout = ({ children, data }) => (
           {children()}
         </div>
         <ScrollToTop showUnder={160}>
-          <span
+          <img
+            src={upArrow}
+            alt="Go to top of page."
             style={{
               boxSizing: 'borderBox',
-              paddingTop: '0.2em',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              fontSize: '2em',
-              color: 'white',
-              background: 'linear-gradient(#595599, #161559)',
               height: '2em',
               width: '2em',
-              borderRadius: '100%',
             }}
-          >
-            ⬆
-          </span>
+          />
         </ScrollToTop>
       </div>
     </div>
