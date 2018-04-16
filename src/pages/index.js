@@ -5,7 +5,7 @@ import { css } from 'glamor'
 
 const listStyle = css({
   textAlign: 'left',
-  margin: '0 auto',
+  margin: '0 auto 1em auto',
   display: 'inline-block',
 })
 
