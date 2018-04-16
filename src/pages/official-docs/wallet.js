@@ -34,7 +34,28 @@ const Gas = () => (
           Sending NAS from your wallet
         </a>
       </li>
+      <li>
+        <a href="https://medium.com/nebulasio/view-wallet-information-fcea3ea35d94">
+          View wallet information
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/nebulasio/check-tx-status-8dc7dd9b79de">
+          Check transaction status
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/nebulasio/deploy-a-smart-contract-1e781e13c22e">
+          Deploy a smart contract
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/nebulasio/signing-a-transaction-offline-ae8278f45201">
+          Signing an offline transaction
+        </a>
+      </li>
     </ul>
+
     <h2>Quickstart</h2>
     <h4>Prerequisites</h4>
     <p>
