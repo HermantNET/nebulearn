@@ -38,7 +38,20 @@ const toggleStyle = css({
 
 class Drawer extends React.Component {
   state = {
-    open: true,
+    open: window.innerWidth > 800,
+    prevPath: window.location.pathname,
+  }
+
+  componentDidUpdate() {
+    if (
+      window.innerWidth <= 800 &&
+      window.location.pathname !== this.state.prevPath
+    ) {
+      this.setState({
+        open: false,
+        prevPath: window.location.pathname,
+      })
+    }
   }
 
   toggleDrawer = () => this.setState({ open: !this.state.open })

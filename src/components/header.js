@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { css } from 'glamor'
 
 const Header = ({ siteTitle }) => (
   <div
@@ -20,12 +21,16 @@ const Header = ({ siteTitle }) => (
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
-          style={{
+          className={css({
             color: 'white',
             textDecoration: 'none',
             textTransform: 'uppercase',
             letterSpacing: '0.1em',
-          }}
+            '@media (max-width: 450px)': {
+              fontSize: '0.6em',
+              lineHeight: '1',
+            },
+          })}
         >
           {siteTitle}
         </Link>
