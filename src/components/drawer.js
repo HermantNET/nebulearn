@@ -38,8 +38,8 @@ const toggleStyle = css({
 
 class Drawer extends React.Component {
   state = {
-    open: window.innerWidth > 800,
-    prevPath: window.location.pathname,
+    open: window ? window.innerWidth > 800 : true,
+    prevPath: window ? window.location.pathname : '/',
   }
 
   componentDidUpdate() {
