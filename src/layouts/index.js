@@ -13,8 +13,15 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content:
+            'Nebulearn is a collection of educational resources for those wanting to get started developing on the Nebulas blockchain.',
+        },
+        {
+          name: 'keywords',
+          content: 'nebulas, documentation, docs, blockchain, NAS',
+        },
       ]}
     />
     <div
