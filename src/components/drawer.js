@@ -116,6 +116,7 @@ class Drawer extends React.Component {
               <Item text="IV. Storage" to="/official-docs/storage" />
               <Item text="V. RPC API" to="/official-docs/rpc" />
               <Item text="VI. Testnet" to="/official-docs/testnet-tutorial" />
+              <Item text="Config" to="/official-docs/config" />
               <Item text="Explorer" to="/official-docs/explorer" />
               <Item text="Gas" to="/official-docs/gas" />
               <Item text="go-nebulas" to="/official-docs/go-nebulas" />
