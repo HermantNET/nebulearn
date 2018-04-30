@@ -111,8 +111,10 @@ const IndexPage = () => (
 
     <hr style={{ margin: '2em 0' }} />
 
-    <h4>Contribute to Nebulearn.com</h4>
-    <a href="https://github.com/HermantNET/nebulearn">GitHub</a>
+    <h4>
+      Contribute to Nebulearn.com on{' '}
+      <a href="https://github.com/HermantNET/nebulearn">GitHub</a>
+    </h4>
 
     <footer style={{ color: 'lightgrey', marginTop: '2em' }}>
       Support Nebulearn (NAS): n1HY4ob2kBRacVHoJKGqmwsvhE6BN5pvEy2
