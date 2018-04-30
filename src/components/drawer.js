@@ -135,6 +135,10 @@ class Drawer extends React.Component {
                 to="/examples/chat-contract"
               />
               <Item
+                text="Dictionary Smart Contract"
+                to="/examples/dictionary-contract"
+              />
+              <Item
                 text="Rectangle Smart Contract"
                 to="/examples/rectangle-contract"
               />

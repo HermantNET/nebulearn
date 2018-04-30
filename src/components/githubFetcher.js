@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import Prism from 'prismjs'
+import 'prismjs/themes/prism-coy.css'
 import 'babel-polyfill'
 
 function flatten(text, child) {
@@ -24,15 +26,24 @@ class GitHubFetcher extends React.Component {
   }
 
   async componentDidMount() {
-    this.setState({
-      data: (await (await fetch(this.props.url)).text()).replace(
-        /\(resources\//gi,
-        `(${this.props.resources}/`
-      ),
-    })
+    if (this.props.resources) {
+      this.setState({
+        data: (await (await fetch(this.props.url)).text()).replace(
+          /\(resources\//gi,
+          `(${this.props.resources}/`
+        ),
+      })
+    } else {
+      this.setState({
+        data: await (await fetch(this.props.url)).text(),
+      })
+    }
   }
 
   render() {
+    const { code, title, author } = this.props
+    const { data } = this.state
+
     return (
       <div>
         <a
@@ -47,10 +58,32 @@ class GitHubFetcher extends React.Component {
         >
           View this file on GitHub
         </a>
-        <ReactMarkdown
-          source={this.state.data}
-          renderers={{ heading: HeadingRenderer }}
-        />
+        {title && <h1>{title}</h1>}
+        {author && (
+          <p>
+            Written by: <a href={author}>{author}</a>
+          </p>
+        )}
+        {code ? (
+          <pre class="language-javascript">
+            <code class="language-javascript">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: Prism.highlight(
+                    data,
+                    Prism.languages.javascript,
+                    'javascript'
+                  ),
+                }}
+              />
+            </code>
+          </pre>
+        ) : (
+          <ReactMarkdown
+            source={data}
+            renderers={{ heading: HeadingRenderer }}
+          />
+        )}
         <hr />
         {this.props.children}
       </div>

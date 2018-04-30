@@ -31,7 +31,17 @@ const IndexPage = () => (
 
     <hr style={{ margin: '2em 0' }} />
 
-    <h2>Quickstart</h2>
+    <h4>
+      <a href="https://medium.com/nebulasio/the-nebulas-incentive-program-starts-now-with-nearly-3-million-in-rewards-e7a1399addc2">
+        Nebulas Incentive Program
+      </a>
+    </h4>
+
+    <a href="https://medium.com/nebulasio/nebulas-incentive-program-demo-11584736178e">
+      Requirements
+    </a>
+
+    <h2 style={{ marginTop: '2em' }}>Quickstart</h2>
     <p>
       Get up and running quickly with these helpful tutorials from the Nebulas
       blog.
@@ -84,6 +94,36 @@ const IndexPage = () => (
         </a>
       </li>
     </ul>
+
+    <h4>Smart Contracts</h4>
+    <ul className={listStyle}>
+      <li>
+        <a href="https://medium.com/nebulasio/how-to-build-a-dapp-on-nebulas-part-1-da4eaf9399bc">
+          How to build a DApp on Nebulas (Part 1)
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/nebulasio/how-to-build-a-dapp-on-nebulas-part-2-5424789f7417">
+          How to build a DApp on Nebulas (Part 2)
+        </a>
+      </li>
+    </ul>
+
+    <hr style={{ margin: '2em 0' }} />
+
+    <h4>Contribute to Nebulearn.com</h4>
+    <a href="https://github.com/HermantNET/nebulearn">GitHub</a>
+
+    <footer style={{ color: 'lightgrey', marginTop: '2em' }}>
+      Support Nebulearn (NAS): n1HY4ob2kBRacVHoJKGqmwsvhE6BN5pvEy2
+      <div style={{ fontSize: '10px' }}>
+        All donated funds will go towards hosting and continued development of
+        Nebulearn.com
+      </div>
+      <div style={{ fontSize: '10px' }}>
+        Disclaimer: Nebulearn.com is not affiliated with Nebulas.io
+      </div>
+    </footer>
   </div>
 )
 
