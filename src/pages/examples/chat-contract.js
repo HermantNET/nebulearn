@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Prism from 'prismjs'
-import 'prismjs/themes/prism-coy.css'
 
 const code = `var ChatContract = function() {
   LocalContractStorage.defineMapProperty(this, "users")
@@ -77,8 +75,6 @@ const ChatContract = () => (
         />
       </code>
     </pre>
-    <hr />
-    <Link to="/">Go back to the homepage</Link>
   </div>
 )
 

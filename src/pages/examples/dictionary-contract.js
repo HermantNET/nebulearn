@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import GithubFetcher from '../../components/githubFetcher'
 
 const DictionaryContract = () => (
@@ -10,9 +9,7 @@ const DictionaryContract = () => (
     code={true}
     title="Super Dictionary Smart Contract"
     author="https://github.com/ChengOrangeJu"
-  >
-    <Link to="/">Go back to the homepage</Link>
-  </GithubFetcher>
+  />
 )
 
 export default DictionaryContract

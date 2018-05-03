@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Prism from 'prismjs'
-import 'prismjs/themes/prism-coy.css'
 
 const code = `
 class Rectangle {
@@ -51,8 +49,6 @@ const RectContract = () => (
         />
       </code>
     </pre>
-    <hr />
-    <Link to="/">Go back to the homepage</Link>
   </div>
 )
 

@@ -4,10 +4,12 @@ import Helmet from 'react-helmet'
 import 'babel-polyfill'
 import ScrollToTop from 'react-scroll-up'
 
-import Header from '../components/header'
 import Drawer from '../components/drawer'
+import Footer from '../components/footer'
+import Header from '../components/header'
 import upArrow from '../images/up-arrow.svg'
 import './index.css'
+import 'prismjs/themes/prism-tomorrow.css'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -38,11 +40,11 @@ const Layout = ({ children, data }) => (
           style={{
             padding: '1em 1.22em',
             width: '100%',
-            paddingBottom: '5em',
           }}
         >
           {children()}
         </div>
+        <Footer noBack={location.pathname === '/'} />
         <ScrollToTop showUnder={160}>
           <img
             src={upArrow}

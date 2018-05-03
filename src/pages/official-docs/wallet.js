@@ -118,8 +118,6 @@ const Gas = () => (
         to the blockchain.
       </li>
     </ol>
-    <hr />
-    <Link to="/">Go back to the homepage</Link>
   </div>
 )
 

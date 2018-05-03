@@ -106,7 +106,30 @@ class Drawer extends React.Component {
                 },
               })}
             >
-              <Header text="Official Docs" />
+              <Header text="Tutorials" />
+              <Item text="Hello, World!" to="/tutorials/hello-world" />
+              {/* <Item
+                text="I. Interacting with Nebulas"
+                to="/tutorials/interacting-with-nebulas"
+              />
+              <Item
+                text="II. Contract Fundamentals"
+                to="/tutorials/smart-contracts"
+              />
+              <Item
+                text="III. Working with Data"
+                to="/tutorials/contract-storage"
+              />
+              <Item
+                text="IV. Deploying your Contract"
+                to="/tutorials/contract-deploy"
+              />
+              <Item
+                text="V. Calling Contract Methods"
+                to="/tutorials/contract-call"
+              /> */}
+
+              <Header text="Nebulas Wiki" />
               <Item text="I. Installation" to="/official-docs/installation" />
               <Item text="II. Transactions" to="/official-docs/transactions" />
               <Item
@@ -115,7 +138,6 @@ class Drawer extends React.Component {
               />
               <Item text="IV. Storage" to="/official-docs/storage" />
               <Item text="V. RPC API" to="/official-docs/rpc" />
-              <Item text="VI. Testnet" to="/official-docs/testnet-tutorial" />
               <Item text="Config" to="/official-docs/config" />
               <Item text="Explorer" to="/official-docs/explorer" />
               <Item text="Gas" to="/official-docs/gas" />
