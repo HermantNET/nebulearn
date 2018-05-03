@@ -11,6 +11,8 @@ import upArrow from '../images/up-arrow.svg'
 import './index.css'
 import 'prismjs/themes/prism-tomorrow.css'
 
+const windowCheck = typeof window !== 'undefined'
+
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
@@ -40,11 +42,12 @@ const Layout = ({ children, data }) => (
           style={{
             padding: '1em 1.22em',
             width: '100%',
+            minHeight: '70vh',
           }}
         >
           {children()}
         </div>
-        <Footer noBack={location.pathname === '/'} />
+        <Footer noBack={windowCheck && window.location.pathname === '/'} />
         <ScrollToTop showUnder={160}>
           <img
             src={upArrow}
