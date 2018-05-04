@@ -9,6 +9,7 @@
     "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-react-next": "^1.0.11",
+    "nebulas": "git+https://github.com/nebulasio/neb.js.git",
     "prismjs": "^1.14.0",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.3.0",

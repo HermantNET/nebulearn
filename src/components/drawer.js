@@ -161,6 +161,7 @@ class Drawer extends React.Component {
             >
               <Header text="Tutorials" />
               <Item text="Hello, World!" to="/tutorials/hello-world" />
+              <Item text="Neb.js Quickstart" to="/tutorials/neb" />
               {/* <Item
                 text="I. Interacting with Nebulas"
                 to="/tutorials/interacting-with-nebulas"
