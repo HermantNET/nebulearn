@@ -45,7 +45,7 @@ const IndexPage = () => (
     </a>
 
     <a href="https://medium.com/nebulasio/nebulas-incentive-program-demo-11584736178e">
-      Requirements
+      Demo Application
     </a>
 
     <h2 style={{ marginTop: '2em' }}>Quickstart</h2>

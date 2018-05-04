@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { css } from 'glamor'
+import Arrow from '../images/up-arrow.svg'
 
 const Header = ({ text }) => (
   <h4 style={{ margin: '0.4em', marginTop: '1em' }}>{text}</h4>
@@ -24,6 +25,58 @@ const Item = ({ text, to }) => (
     {text}
   </Link>
 )
+
+class Collapsable extends React.Component {
+  state = {
+    open: false,
+  }
+
+  toggle = () => {
+    this.setState({ open: !this.state.open })
+  }
+
+  render() {
+    const { text, children } = this.props
+    return [
+      <div
+        onClick={this.toggle}
+        style={{
+          color: 'white',
+          padding: '0.2em 0.4em',
+          cursor: 'pointer',
+          userSelect: 'none',
+        }}
+      >
+        <div style={{ display: 'inline-block' }}>{text}</div>
+        <svg
+          width="8pt"
+          height="8pt"
+          viewBox="0 0 560 560"
+          style={{
+            transform: this.state.open && 'rotate(180deg)',
+            marginLeft: '0.4em',
+          }}
+        >
+          <g
+            transform="translate(0, -0.561)"
+            style={{
+              fill: 'white',
+              fillRule: 'evenodd',
+              stroke: 'none',
+            }}
+          >
+            <path d="M0 559.991 C0 558.504 279.994 0 280.458 0.561456 C282.014 2.44528 560.512 560.13 559.999 560.337 C559.665 560.472 496.562 533.384 419.77 500.142 C419.77 500.142 280.15 439.701 280.15 439.701 C280.15 439.701 140.756 500.131 140.756 500.131 C64.0894 533.368 1.05572 560.561 0.681114 560.561 C0.306506 560.561 8e-06 560.304 8e-06 559.991 C8e-06 559.991 0 559.991 0 559.991 Z" />
+          </g>
+        </svg>
+      </div>,
+      this.state.open ? (
+        <div style={{ marginLeft: '0.4em' }}>{children}</div>
+      ) : (
+        ''
+      ),
+    ]
+  }
+}
 
 const toggleStyle = css({
   width: '20px',
@@ -113,6 +166,10 @@ class Drawer extends React.Component {
                 to="/tutorials/interacting-with-nebulas"
               />
               <Item
+                text="Setup"
+                to="/tutorials/smart-contracts"
+              />
+              <Item
                 text="II. Contract Fundamentals"
                 to="/tutorials/smart-contracts"
               />
@@ -122,6 +179,10 @@ class Drawer extends React.Component {
               />
               <Item
                 text="IV. Deploying your Contract"
+                to="/tutorials/contract-deploy"
+              />
+              <Item
+                text="VI. Putting it All Together"
                 to="/tutorials/contract-deploy"
               />
               <Item
@@ -148,26 +209,13 @@ class Drawer extends React.Component {
               <Item text="Web Wallet" to="/official-docs/wallet" />
 
               <Header text="Examples" />
-              <Item
-                text="Bank Vault Smart Contract"
-                to="/examples/vault-contract"
-              />
-              <Item
-                text="Chat Room Smart Contract"
-                to="/examples/chat-contract"
-              />
-              <Item
-                text="Dictionary Smart Contract"
-                to="/examples/dictionary-contract"
-              />
-              <Item
-                text="Rectangle Smart Contract"
-                to="/examples/rectangle-contract"
-              />
-              <Item
-                text="Sample Smart Contract"
-                to="/examples/sample-contract"
-              />
+              <Collapsable text="Smart Contracts">
+                <Item text="Bank Vault" to="/examples/vault-contract" />
+                <Item text="Chat Room" to="/examples/chat-contract" />
+                <Item text="Dictionary" to="/examples/dictionary-contract" />
+                <Item text="Rectangle" to="/examples/rectangle-contract" />
+                <Item text="Sample" to="/examples/sample-contract" />
+              </Collapsable>
 
               <Header text="API Reference" />
               <Item text="Events" to="/api/events" />

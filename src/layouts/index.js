@@ -25,7 +25,8 @@ const Layout = ({ children, data }) => (
         },
         {
           name: 'keywords',
-          content: 'nebulas, documentation, docs, blockchain, NAS',
+          content:
+            'nebulas, documentation, docs, blockchain, NAS, resources, developers, development, dev, developer, coding, code, coder, programming, programmer, smart contracts',
         },
       ]}
     />

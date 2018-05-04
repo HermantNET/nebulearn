@@ -8,6 +8,9 @@ const IndexPage = () => (
         <a href="https://nebulas.io">Nebulas Website</a>
       </li>
       <li>
+        <a href="https://www.reddit.com/r/nebulas/">Nebulas Subreddit</a>
+      </li>
+      <li>
         <a href="https://medium.com/nebulasio">Nebulas Blog</a>
       </li>
       <li>
@@ -41,6 +44,11 @@ const IndexPage = () => (
 
     <h3>For Developers</h3>
     <ul>
+      <li>
+        <a href="https://www.reddit.com/r/nasdev/">
+          Nebulas Developer Subreddit
+        </a>
+      </li>
       <li>
         <a href="https://github.com/nebulasio/go-nebulas">Nebulas Github</a>
       </li>
