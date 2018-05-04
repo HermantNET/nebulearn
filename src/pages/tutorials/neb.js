@@ -6,7 +6,7 @@ import Code from '../../components/code'
 
 const NebJs = () => (
   <div>
-    <h1>Neb.js Introduction</h1>
+    <h1>Neb.js Quickstart</h1>
     <h2>The Nebulas JavaScript API</h2>
     <p>
       Neb.js from Nebulas.io is the JavaScript solution for interacting with the
@@ -69,13 +69,21 @@ const NebJs = () => (
       <code>app/index.js</code>
     </p>
     <Code
-      language="bash"
+      language="js"
       code={`import * as Neb from "nebulas" 
 
 let account = Neb.Account.NewAccount()
 alert(account.getAddressString())`}
     />
     <br />
+    <p>Now run the project:</p>
+    <Code language="bash" code="npm run dev" />
+    <br />
+    <p>
+      Finally navigate to{' '}
+      <a href="http://localhost:8080/">http://localhost:8080/</a> in your
+      browser to see it in action.
+    </p>
 
     <h3>Live Example</h3>
     <p>

@@ -8,16 +8,18 @@ import 'prismjs/components/prism-yaml'
 import 'prismjs/components/prism-typescript'
 
 const Code = ({ code, language }) => {
-  if (language === 'txt') {
+  let lang = language
+  if (lang === 'txt') {
     return (
       <pre>
         <code>{code}</code>
       </pre>
     )
-  }
+  } else if (lang === 'js') lang = 'javascript'
+  else if (lang === 'yml') lang = 'yaml'
   return (
-    <pre class="language-javascript">
-      <code class="language-javascript">
+    <pre class={'language-' + lang}>
+      <code class={'language-' + lang}>
         <div
           dangerouslySetInnerHTML={{
             __html: Prism.highlight(
