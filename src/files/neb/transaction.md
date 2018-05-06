@@ -116,7 +116,8 @@ Returns **[Object][33]** Plain JavaScript object with Transaction fields.
 ### toString
 
 Convert transaction to JSON string.
-</br><b>Note:</b> Transaction should be [sign][transaction#signtransaction][34] before converting.
+
+**Note:** Transaction should be [sign][transaction#signtransaction][34] before converting.
 
 **Examples**
 
@@ -142,7 +143,8 @@ Returns **[String][35]** JSON stringify of transaction data.
 ### toProto
 
 Convert transaction to Protobuf format.
-</br><b>Note:</b> Transaction should be [sign][transaction#signtransaction][34] before converting.
+
+**Note:** Transaction should be [sign][transaction#signtransaction][34] before converting.
 
 **Examples**
 
@@ -168,7 +170,8 @@ Returns **[Buffer][36]** Transaction data in Protobuf format
 ### toProtoString
 
 Convert transaction to Protobuf hash string.
-</br><b>Note:</b> Transaction should be [sign][transaction#signtransaction][34] before converting.
+
+**Note:** Transaction should be [sign][transaction#signtransaction][34] before converting.
 
 **Examples**
 
