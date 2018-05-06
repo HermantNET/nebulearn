@@ -57,10 +57,17 @@ const NebJs = () => (
     <br />
     <h5>3. Add Neb.js</h5>
     <p>Now lets add Neb.js to our project:</p>
-    <Code
-      language="bash"
-      code="npm install --save https://github.com/nebulasio/neb.js.git"
-    />
+    <Code language="bash" code="npm install --save nebulas" />
+    <blockquote>
+      <p>
+        If the previous command doesn't work, you can try installing directly
+        from GitHub:
+      </p>
+      <Code
+        language="bash"
+        code="npm install --save https://github.com/nebulasio/neb.js.git"
+      />
+    </blockquote>
     <br />
     <h5>4. Test Neb.js</h5>
     <p>

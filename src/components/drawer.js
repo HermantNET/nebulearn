@@ -220,6 +220,13 @@ class Drawer extends React.Component {
 
               <Header text="API Reference" />
               <Item text="Events" to="/api/events" />
+              <Collapsable text="Neb.js">
+                <Item text="Account" to="/api/neb/account" />
+                <Item text="Admin" to="/api/neb/admin" />
+                <Item text="API" to="/api/neb/api" />
+                <Item text="Neb" to="/api/neb/neb" />
+                <Item text="Transaction" to="/api/neb/transaction" />
+              </Collapsable>
               <Item text="NRC20 Tokens" to="/api/nrc20" />
               <Item text="REPL Console" to="/api/repl-console" />
               <Item text="Remote Procedure Calls (RPC)" to="/api/rpc" />

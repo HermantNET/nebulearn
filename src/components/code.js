@@ -18,8 +18,8 @@ const Code = ({ code, language }) => {
   } else if (lang === 'js') lang = 'javascript'
   else if (lang === 'yml') lang = 'yaml'
   return (
-    <pre class={'language-' + lang}>
-      <code class={'language-' + lang}>
+    <pre className={'language-' + lang}>
+      <code className={'language-' + lang}>
         <div
           dangerouslySetInnerHTML={{
             __html: Prism.highlight(

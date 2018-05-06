@@ -1,6 +1,7 @@
 {
   "name": "nebulearn",
-  "description": "Nebulearn is a collection of educational resources for those wanting to get started developing on the Nebulas blockchain.",
+  "description":
+    "Nebulearn is a collection of educational resources for those wanting to get started developing on the Nebulas blockchain.",
   "version": "1.0.0",
   "author": "Thomas Herman <hermant.edu@gmail.com>",
   "dependencies": {
@@ -9,28 +10,47 @@
     "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-react-next": "^1.0.11",
-    "nebulas": "git+https://github.com/nebulasio/neb.js.git",
+    "gatsby-source-filesystem": "^1.5.35",
+    "jsdoc-to-markdown": "^4.0.1",
+    "nebulas": "^0.4.8",
     "prismjs": "^1.14.0",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.3.0",
     "react-scroll-up": "^1.3.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && cd public && surge"
+    "deploy": "gatsby build && cd public && surge",
+    "gen:md:nebjs":
+      "npm run gen:md:nebjs:account & npm run gen:md:nebjs:admin & npm run gen:md:nebjs:api & npm run gen:md:nebjs:crypto-utils & npm run gen:md:nebjs:crypto-utils & npm run gen:md:nebjs:httprequest & npm run gen:md:nebjs:neb & npm run gen:md:nebjs:transaction & npm run gen:md:nebjs:utils",
+    "gen:md:nebjs:account":
+      "documentation build -o src/files/neb/account.md -f md node_modules/nebulas/lib/account.js",
+    "gen:md:nebjs:admin":
+      "documentation build -o src/files/neb/admin.md -f md node_modules/nebulas/lib/admin.js",
+    "gen:md:nebjs:api":
+      "documentation build -o src/files/neb/api.md -f md node_modules/nebulas/lib/api.js",
+    "gen:md:nebjs:crypto-utils":
+      "documentation build -o src/files/neb/crypto-utils.md -f md node_modules/nebulas/lib/utils/crypto-utils.js",
+    "gen:md:nebjs:httprequest":
+      "documentation build -o src/files/neb/httprequest.md -f md node_modules/nebulas/lib/httprequest.js",
+    "gen:md:nebjs:neb":
+      "documentation build -o src/files/neb/neb.md -f md --shallow node_modules/nebulas/lib/neb.js",
+    "gen:md:nebjs:transaction":
+      "documentation build -o src/files/neb/transaction.md -f md node_modules/nebulas/lib/transaction.js",
+    "gen:md:nebjs:utils":
+      "documentation build -o src/files/neb/utils.md -f md node_modules/nebulas/lib/utils/utils.js"
   },
   "devDependencies": {
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gh-pages": "^1.1.0",
-    "prettier": "^1.12.0"
+    "prettier": "^1.12.0",
+    "raw-loader": "^0.5.1"
   }
 }

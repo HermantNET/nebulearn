@@ -1,29 +1,8 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown'
 import Prism from 'prismjs'
 import 'babel-polyfill'
 import Code from './code'
-
-function flatten(text, child) {
-  return typeof child === 'string'
-    ? text + child
-    : React.Children.toArray(child.props.children).reduce(flatten, text)
-}
-
-function HeadingRenderer(props) {
-  var children = React.Children.toArray(props.children)
-  var text = children.reduce(flatten, '')
-  var slug = text
-    .toLowerCase()
-    .replace(/[\(\)]/g, '')
-    .replace(/\W/g, '-')
-  return React.createElement('h' + props.level, { id: slug }, props.children)
-}
-
-function CodeRenderer(props) {
-  console.log(props.language)
-  return <Code language={props.language} code={props.value} />
-}
+import Markdown from './markdown'
 
 class GitHubFetcher extends React.Component {
   state = {
@@ -69,14 +48,7 @@ class GitHubFetcher extends React.Component {
             Written by: <a href={author}>{author}</a>
           </p>
         )}
-        {code ? (
-          <Code code={data} />
-        ) : (
-          <ReactMarkdown
-            source={data}
-            renderers={{ heading: HeadingRenderer, code: CodeRenderer }}
-          />
-        )}
+        {code ? <Code code={data} /> : <Markdown data={data} />}
         {this.props.children}
       </div>
     )
