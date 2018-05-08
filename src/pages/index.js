@@ -48,6 +48,22 @@ const IndexPage = () => (
       Demo Application
     </a>
 
+    <h3>
+      <a href="https://incentive.nebulas.io/signup.html?invite=AJhgc">
+        🎈🕺 Nebulas Incentive Program is LIVE! 🤘🎈
+      </a>
+    </h3>
+    <blockquote>
+      <p>
+        <a href="https://incentive.nebulas.io/signup.html?invite=AJhgc">
+          Sign up
+        </a>{' '}
+        using our referral code and enter a valid DApp to receive an extra 10
+        NAS!
+      </p>
+      <p>Referral Code: AJhgc</p>
+    </blockquote>
+
     <h2 style={{ marginTop: '2em' }}>Quickstart</h2>
 
     <p style={{ margin: '3em 0' }}>
@@ -69,6 +85,11 @@ const IndexPage = () => (
           <li>
             <a href="https://medium.com/nebulasio/dive-into-nebulas-2-quick-start-105da9df80e1">
               Dive into Nebulas 2  —  A Quick Start
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/nebulasio/dive-into-nebulas-3-accounts-3ebd208858d6">
+              Dive into Nebulas 3  —  A Quick Start
             </a>
           </li>
         </ul>
@@ -103,6 +124,11 @@ const IndexPage = () => (
             </a>
           </li>
           <li>
+            <a href="https://medium.com/nebulasio/call-a-smart-contract-on-nebulas-3522038aec18">
+              Call a smart contract
+            </a>
+          </li>
+          <li>
             <a href="https://medium.com/nebulasio/signing-a-transaction-offline-ae8278f45201">
               Signing an offline transaction
             </a>
@@ -121,6 +147,11 @@ const IndexPage = () => (
           <li>
             <a href="https://medium.com/nebulasio/how-to-build-a-dapp-on-nebulas-part-2-5424789f7417">
               How to build a DApp on Nebulas (Part 2)
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/nebulasio/how-to-build-a-dapp-on-nebulas-part3-3586126aa124">
+              How to build a DApp on Nebulas (Part 3)
             </a>
           </li>
         </ul>
