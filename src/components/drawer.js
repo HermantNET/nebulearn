@@ -206,6 +206,10 @@ class Drawer extends React.Component {
               <Item text="go-nebulas" to="/official-docs/go-nebulas" />
               <Item text="Mainnet" to="/official-docs/mainnet" />
               <Item text="Neb.js" to="/official-docs/neb-js" />
+              <Item
+                text="Smart Contract Permissions"
+                to="/official-docs/smart-contract-permissions"
+              />
               <Item text="Testnet" to="/official-docs/testnet" />
               <Item text="Web Wallet" to="/official-docs/wallet" />
 
